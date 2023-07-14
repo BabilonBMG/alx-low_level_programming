@@ -5,8 +5,6 @@
 * Return: Always 0 (Success)
 */
 int main(void)
-/** A Program that prints out the size of the various type of conversion that can be applied
- */
 {
 	printf("Size of a char: %d byte(s)\n", sizeof(char));
 	printf("Size of an int: %d byte(s)\n", sizeof(int));
