@@ -27,4 +27,3 @@ int largest;
 	}
 	return (largest);
 }
-
