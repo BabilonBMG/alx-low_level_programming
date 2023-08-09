@@ -2,12 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - multipies two numbers
- * @argv: array of arguements
- * @argc: number of arguments
- * Return 0 on success 1 on failure
- *
- *
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
+ * Return: the in converted from the string
  */
 
 int _atoi(char *s)
