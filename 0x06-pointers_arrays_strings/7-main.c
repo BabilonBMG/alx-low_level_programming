@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  * main - check the code for
@@ -11,8 +12,8 @@ int main(void)
     char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
     char *p;
 
-    p = leet(s);
-    printf("%s", p);
+    p = s;
     printf("%s", s);
+    printf("%s", p);
     return (0);
 }
