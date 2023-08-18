@@ -3,13 +3,9 @@
 #include <stdio.h>
 
 /**
- * _strdup():allocate storae space for a copy of strSource and
- * then copies strSource to the allocated space
- * @str: string to be allocated
+ * _strdup - duplicate to new memory space location
+ * @str: char
  * Return: 0
- * description: allocate storage space for a copy of strSource and
- * then copies strSource to the allocated space.
- *
  */
 
 char *_strdup(char *str)
