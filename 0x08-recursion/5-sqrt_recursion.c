@@ -5,6 +5,7 @@
  * _sqrt_recursion - returns the natural root of a number
  * @n: number to be squared
  * @r: root of the variable given
+ * i: Number integer
  * actual_sqrt_recursion - identifies the real square root of a variable
  */
 int actual_sqrt_recursion(int n, int i);
