@@ -1,47 +1,46 @@
 #include "main.h"
-#include <string.h>
+/**
+ * palind2 - obtains length of a
+ * @a: string
+ * @l: integer to count length
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int palind2(char *a, int l)
+{
+	if (*a == 0)
+		return (l - 1);
+	return (palind2(a + 1, l + 1));
+}
+/**
+ * palind3 - compares string vs string reverse
+ * @a: string
+ * @l: length
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 
-int check_pal(char *s, int i, int len);
-int _strlen_recursion(char *s);
-
+int palind3(char *a, int l)
+{
+	if (*a != *(a + l))
+		return (0);
+	else if (*a == 0)
+		return (1);
+	return (palind3(a + 1, l - 2));
+}
 /**
  * is_palindrome - checks if a string is a palindrome
- * @s: string to reverse
- * check_pal - checks for the characters recursively for palindrome
- * Return: 1 if it is, 0 it's not
+ * @s: string to evaluate
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 int is_palindrome(char *s)
 {
-	if (*s == 0)
-		return (1);
-	return (check_pal(s, 0, _strlen_recursion(s)));
-}
+	int l;
 
-/**
- * _strlen_recursion - returns the length of a string
- * @s: string to calculate the length of
- *
- * Return: length of the string
- */
-int _strlen_recursion(char *s)
-{
-	if (*s == '\0')
-		return (0);
-	return (1 + _strlen_recursion(s + 1));
+	l = palind2(s, 0);
+	return (palind3(s, l));
 }
-
-/**
- * check_pal - checks for the characters recursively for palindrome
- * @i: number to be multiplied with the variable
- * @s: string to evaluate
- * @len: length of the string
- */
-int check_pal(char *s, int i, int len)
-{
-	if (*(s + i) != *(s + len - 1))
-		return (0);
-	if (i >= len)
-		return (1);
-	return (check_pal(s, i + 1, len - 1));
-}
-
