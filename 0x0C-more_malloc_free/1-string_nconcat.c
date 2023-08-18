@@ -5,7 +5,7 @@
 /**
  * string_nconcat - concatenates n bytes of a strings to another
  * @s1: string to be copy to
- * @s1: string to copy from
+ * @s2: string to copy from
  * @n: number of bytes from s2 to concotenate to s1
  * Return: pointer to the resulting string
  */
