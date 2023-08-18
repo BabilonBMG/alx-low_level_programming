@@ -3,13 +3,12 @@
 #include <stdio.h>
 
 /**
- *
- *
- *
- * _strdup():allocate storae space for a copy of strSource and then copies strSource to the allocated space
+ * _strdup():allocate storae space for a copy of strSource and
+ * then copies strSource to the allocated space
  * @str: string to be allocated
  * Return: 0
- * description allocate storage space for a copy of strSource and then copies strSource to the allocated space.
+ * description allocate storage space for a copy of strSource and
+ * then copies strSource to the allocated space.
  *
  */
 
@@ -18,14 +17,14 @@ char *_strdup(char *str)
 	char *aaa;
 	int i, r = 0;
 
-	if(str == NULL)
+	if (str == NULL)
 		return (NULL);
-	i =0;
+	i = 0;
 	while (str[i] != '\0')
 		i++;
-	aaa = malloc(sizeof(char) * (i +1));
+	aaa = malloc(sizeof(char) * (i + 1));
 
-	if(aaa == NULL) 
+	if (aaa == NULL)
 		return (NULL);
 
 	for (r = 0; str[r]; r++)
