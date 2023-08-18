@@ -3,7 +3,8 @@
 /**
  * factorial- Determines the factorial of a given number
  * @n: Variable to be factorized
- * Return factorial of n
+ * Return: on success 1.
+ * on error, -1 is returned, and errno is set appropriately 
  */
 
 int factorial(int n)
